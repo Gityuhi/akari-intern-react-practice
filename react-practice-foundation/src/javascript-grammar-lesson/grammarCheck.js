@@ -135,3 +135,27 @@
 // export const newPosts = posts.map((post) => {
 //     return post.id == targetPostId ? {...post, liked: "true"} : {...post}
 // })
+
+// 1. テンプレート文字列 (Template Strings) const user = { name: "鈴木", age: 28 }; このuserオブジェクトを使い、「こんにちは、鈴木さん。あなたは28歳です。」という文字列を、テンプレート文字列（バッククォート `` と ${}）を使って作成し、コンソールに表示してください。
+// const user = { name: "鈴木", age: 28 };
+// console.log(`こんにちは、${user.name}さん。あなたは${user.age}歳です。`);
+
+// 2. 分割代入 (Object Destructuring) const props = { title: "React課題", priority: "High" }; このpropsオブジェクトから、titleとpriorityという2つの変数を一行で取り出す、分割代入のコードを書いてください。 （const title = ... や const priority = ... と2行で書くのはNGです）
+// const props = { title: "React課題", priority: "High" }
+// const { title, priority} = props
+// console.log(`title: ${title}
+//     priority: ${priority}`);
+
+// 3. 分割代入 (Array Destructuring) const [todos, setTodos] = useState(...); は、まさにこれです。 const colors = ["Red", "Green", "Blue"]; この配列から、1番目の要素をprimaryColor、2番目の要素をsecondaryColorという変数に一行で取り出す、分割代入のコードを書いてください。
+// const colors = ["Red", "Green", "Blue"]
+// const [primaryColor, secondaryColor] = colors
+
+// 4. デフォルト値 (in Destructuring) const settings = { theme: "dark" }; このsettingsオブジェクトから、themeとfontSizeを分割代入で取り出してください。 ただし、fontSizeはsettingsの中に存在しないため、デフォルト値として 16 が代入されるようにコードを書いてください。
+// const settings = { theme: "dark" }
+// const { theme, fontSize = 16} = settings
+
+// 5. デフォルト値 (in Function Parameters) function createGreeting(name) { return "こんにちは、" + name + "さん"; } この関数を、nameが渡されなかった場合（createGreeting()と引数なしで呼ばれた場合）でも、"こんにちは、ゲストさん"と返せるように、引数にデフォルト値を設定する形で修正してください。
+function createGreeting(name = "ゲスト") {
+  return "こんにちは、" + name + "さん";
+}
+createGreeting()
